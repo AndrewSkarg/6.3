@@ -31,13 +31,12 @@ public class Main {
 
         ArrayList<Scene>scenes=EventUtil.createConcertPlan(new Scene[]{Yel1,Pin2,Ora3,Bl4,Gr5,Purp6});
         scenes.stream().forEach(System.out::println);
-        double evPr=EventUtil.priceForAllEvents(scenes);
+       double evPr=EventUtil.priceForAllEvents(scenes);
         double trPr=EventUtil.priceForTransfer(scenes,locationsMap);
         double sum=evPr+trPr;
-        System.out.println("price for all events: "+evPr+" $");
-        System.out.println("price for transfer  : "+trPr+" $");
-        System.out.println("total price         : "+sum+" $");
-
+        System.out.printf("%-23s %.2f $\n","price for all events:",evPr);
+        System.out.printf("%-23s %.2f $\n","price for transfer:",trPr);
+        System.out.printf("%-23s %.2f $\n","total price:",sum);
 
 
 
