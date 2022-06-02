@@ -39,6 +39,6 @@ public class Event {
     @Override
     public String toString() {
        return String.format("Event -- band <** %-14s **> price %.2f , start - %2d : %2d , finish - %2d : %2d ,duration: %2d min ***",
-                title,price,start.getHour(),start.getMinute(),finish.getHour(),finish.getMinute(),getDuration().toMinutesPart());
+                title,price,start.getHour(),start.getMinute(),finish.getHour(),finish.getMinute(),getDuration().toMinutes());
     }
 }
